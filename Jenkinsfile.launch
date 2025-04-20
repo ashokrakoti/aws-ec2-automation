@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Launch EC2') {
+            steps {
+                sh 'bash scripts/launch-ec2.sh'
+            }
+        }
+    }
+}

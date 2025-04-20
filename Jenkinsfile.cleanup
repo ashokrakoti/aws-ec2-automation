@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Cleanup EC2 Instances') {
+            steps {
+                sh 'bash scripts/cleanup-ec2-by-tag.sh'
+            }
+        }
+    }
+}
